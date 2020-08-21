@@ -7,7 +7,5 @@ from .views import (
 
 urlpatterns = [
     path('/list', ListView.as_view()),
-    path('/<slug:req_product_id>/color/<slug:req_color_id>', DetailView.as_view()),
+    path('/<int:product_id>', DetailView.as_view()),
 ]
-
-
